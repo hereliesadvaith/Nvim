@@ -1,4 +1,4 @@
-# Neovim Configuration
+# Neovim
 
 Welcome to my Neovim configuration! This configuration is tailored to provide a streamlined and efficient Neovim experience with a focus on simplicity and productivity.
 
@@ -13,7 +13,7 @@ Welcome to my Neovim configuration! This configuration is tailored to provide a 
 
 ## Installation
 
-1. Make sure you installed all the mentioned dependencies.
+1. Make sure you installed the dependencies mentioned above.
 2. Clone this repository:
 
    ```bash
@@ -22,8 +22,8 @@ Welcome to my Neovim configuration! This configuration is tailored to provide a 
 
 ## Features
 
-A clean and minimal configuration to keep things simple. You can easily add your plugins, keybindings and settings to make it truly yours. The key plugins used for this configuration is mentioned below. Click on the link to know more about the plugins.
-configuration
+A clean and minimal configuration to keep things simple. You can easily add your plugins, keybindings and settings to make it truly yours. The key plugins used for this configuration is mentioned below. Click on the links to know more about the plugins.
+
 - [Lazy](https://github.com/folke/lazy.nvim)
 - [Catppuccin](https://github.com/catppuccin/nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
