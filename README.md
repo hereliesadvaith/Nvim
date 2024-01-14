@@ -14,11 +14,17 @@ Welcome to my Neovim configuration! This configuration is tailored to provide a 
 ## Installation
 
 1. Make sure you installed the dependencies mentioned above.
-2. Clone this repository:
+2. Create backup of below mentioned directories and delete them.
+   - ~/.cache/nvim
+   - ~/.config/nvim
+   - ~/.local/share/nvim
+   - ~/.local/state/nvim
+3. Clone this repository:
 
    ```bash
    git clone https://github.com/hereliesadvaith/Nvim.git ~/.config/nvim
    ```
+4. Open Neovim and wait for Lazy package manager to install the plugins.
 
 ## Features
 
