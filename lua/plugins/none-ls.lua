@@ -11,7 +11,6 @@ return {
 					null_ls.builtins.formatting.prettier,
 					-- Python
 					null_ls.builtins.diagnostics.pylint,
-					null_ls.builtins.formatting.autopep8,
 				},
 			})
 			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})

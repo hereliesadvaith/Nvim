@@ -23,6 +23,7 @@ Welcome to my Neovim configuration! This configuration is tailored to provide a 
 
    ```bash
    git clone https://github.com/hereliesadvaith/Nvim.git ~/.config/nvim
+   sudo apt install ripgrep
    ```
 4. Open Neovim and wait for Lazy package manager to install the plugins.
 
