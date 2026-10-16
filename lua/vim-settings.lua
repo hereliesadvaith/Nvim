@@ -6,6 +6,15 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set clipboard=unnamedplus")
+vim.cmd("set autoread")
+
+-- Reload files changed outside Neovim (e.g. by AI) every second
+local timer = vim.uv.new_timer()
+timer:start(1000, 1000, vim.schedule_wrap(function()
+    if vim.fn.mode() ~= "c" then
+        vim.cmd("silent! checktime")
+    end
+end))
 
 -- Vim Keymaps
 vim.g.mapleader = " "
