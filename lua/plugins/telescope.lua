@@ -8,6 +8,7 @@ return {
         config = function()
             vim.keymap.set("n", "<C-p>", require("telescope.builtin").find_files, {})
             vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, {})
+            vim.keymap.set("n", "<leader>gs", require("telescope.builtin").git_status, {})
         end
     },
     {
