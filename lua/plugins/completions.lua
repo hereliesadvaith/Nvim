@@ -24,7 +24,6 @@ return {
 				}),
 				-- sources for autocompletion
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" }, -- lsp
 					{ name = "luasnip" }, -- snippets
 					{ name = "buffer" }, -- text within current buffer
 					{ name = "path" }, -- file system paths
@@ -48,16 +47,4 @@ return {
 	{
 		"rafamadriz/friendly-snippets",
 	},
-    {
-        "hrsh7th/cmp-nvim-lsp",
-        config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            require("lspconfig")["lua_ls"].setup({
-                capabilities = capabilities
-            })
-            require("lspconfig")["pyright"].setup({
-                capabilities = capabilities
-            })
-        end
-    },
 }
