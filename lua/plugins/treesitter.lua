@@ -11,10 +11,19 @@ return {
 				"python",
 				"query",
 				"xml",
+				"yaml",
+				"json",
+				"sql",
+				"css",
+				"scss",
+				"markdown",
+				"markdown_inline",
+				"diff",
+				"gitcommit",
 			}
 			require("nvim-treesitter").install(languages)
 			vim.api.nvim_create_autocmd("FileType", {
-				pattern = { "lua", "javascript", "python", "query", "xml" },
+				pattern = { "lua", "javascript", "python", "query", "xml", "yaml", "json", "sql", "css", "scss", "markdown", "diff", "gitcommit" },
 				callback = function()
 					-- highlighting (pcall: parsers are still installing on first launch)
 					if not pcall(vim.treesitter.start) then
