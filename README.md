@@ -48,5 +48,7 @@ A clean and minimal configuration to keep things simple. You can easily add your
 - [Comment](https://github.com/numToStr/Comment.nvim)
 - [Indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Autopairs](https://github.com/windwp/nvim-autopairs)
+- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [Diffview](https://github.com/sindrets/diffview.nvim)
 
 Plugin versions are pinned in `lazy-lock.json`. Run `:Lazy restore` to install exactly those versions, or `:Lazy update` to move to the latest ones.
