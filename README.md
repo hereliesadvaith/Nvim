@@ -6,10 +6,11 @@ Welcome to my Neovim configuration! This configuration is tailored to provide a 
 
 ## Dependencies
 
-1. Neovim 0.9x
+1. Neovim 0.12+
 2. git
-2. pip
-3. npm
+3. ripgrep
+4. tree-sitter-cli
+5. A C compiler (gcc or clang)
 
 ## Installation
 
@@ -23,9 +24,14 @@ Welcome to my Neovim configuration! This configuration is tailored to provide a 
 
    ```bash
    git clone https://github.com/hereliesadvaith/Nvim.git ~/.config/nvim
-   sudo apt install ripgrep
    ```
-4. Open Neovim and wait for Lazy package manager to install the plugins.
+4. Open Neovim and wait for Lazy package manager to install the plugins. Treesitter parsers build in the background, so restart Neovim once they are done.
+
+On Arch based distros the dependencies can be installed with:
+
+```bash
+sudo pacman -S --needed neovim git ripgrep tree-sitter-cli gcc
+```
 
 ## Features
 
@@ -37,8 +43,10 @@ A clean and minimal configuration to keep things simple. You can easily add your
 - [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [Tmux-Navigator](https://github.com/christoomey/vim-tmux-navigator)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [Lspconfig](https://github.com/neovim/nvim-lspconfig)
-- [None-ls](https://github.com/nvimtools/none-ls.nvim)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [Dadbod](https://github.com/tpope/vim-dadbod)
+- [Comment](https://github.com/numToStr/Comment.nvim)
+- [Indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Autopairs](https://github.com/windwp/nvim-autopairs)
+
+Plugin versions are pinned in `lazy-lock.json`. Run `:Lazy restore` to install exactly those versions, or `:Lazy update` to move to the latest ones.
