@@ -1,21 +1,28 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		lazy = false,
 		build = ":TSUpdate",
 		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = {
-					"lua",
-					"javascript",
-					"python",
-					"query",
-				},
-				highlight = {
-					enable = true,
-				},
-				indent = {
-					enable = true,
-				},
+			local languages = {
+				"lua",
+				"javascript",
+				"python",
+				"query",
+				"xml",
+			}
+			require("nvim-treesitter").install(languages)
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "lua", "javascript", "python", "query", "xml" },
+				callback = function()
+					-- highlighting (pcall: parsers are still installing on first launch)
+					if not pcall(vim.treesitter.start) then
+						return
+					end
+					-- indentation
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end,
 			})
 		end,
 	},
